@@ -8,6 +8,14 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  define: {
+    "process.env.NEXT_PUBLIC_SUPABASE_URL": JSON.stringify(
+      process.env.NEXT_PUBLIC_SUPABASE_URL || "https://tuhxglfhrgltivhtihcq.supabase.co"
+    ),
+    "process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY": JSON.stringify(
+      process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY || "sb_publishable_M3bN7OY49EQ0l3ECaJ440g_1g9Udc2Y"
+    ),
+  },
   resolve: {
     alias: [
       { find: "@", replacement: path.resolve(__dirname, "./src") },
