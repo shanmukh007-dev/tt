@@ -35,25 +35,27 @@ app.add_middleware(
 
 # ----------------- Database Setup & Persistence -----------------
 
+DEFAULT_USERS = [
+    {
+        "id": "513d46d5-5557-48c8-ae1d-5b633141896e",
+        "email": "staff@autovsm.com",
+        "password": "password123",
+        "name": "Rajesh Sharma",
+        "role": "staff",
+        "customer_id": None,
+    },
+    {
+        "id": "f61c7ffa-d317-4a27-951e-651beb19b21b",
+        "email": "customer@autovsm.com",
+        "password": "password123",
+        "name": "Priya Sharma",
+        "role": "customer",
+        "customer_id": "b4d8ead2-b110-4cad-baf3-96ceb3383002",
+    },
+]
+
 db: Dict[str, Any] = {
-    "users": [
-        {
-            "id": "513d46d5-5557-48c8-ae1d-5b633141896e",
-            "email": "staff@autovsm.com",
-            "password": "password123",
-            "name": "Rajesh Sharma",
-            "role": "staff",
-            "customer_id": None,
-        },
-        {
-            "id": "f61c7ffa-d317-4a27-951e-651beb19b21b",
-            "email": "customer@autovsm.com",
-            "password": "password123",
-            "name": "Priya Sharma",
-            "role": "customer",
-            "customer_id": "b4d8ead2-b110-4cad-baf3-96ceb3383002",
-        },
-    ],
+    "users": [dict(u) for u in DEFAULT_USERS],
     "customers": [],
     "vehicles": [],
     "services": [],
@@ -61,25 +63,32 @@ db: Dict[str, Any] = {
 
 def load_db():
     global db
+    loaded = None
     if os.path.exists(DB_FILE):
         try:
             with open(DB_FILE, "r", encoding="utf-8") as f:
-                db = json.load(f)
-            return
+                loaded = json.load(f)
         except Exception:
             pass
 
-    if os.path.exists(SEED_FILE):
+    if not loaded and os.path.exists(SEED_FILE):
         try:
             with open(SEED_FILE, "r", encoding="utf-8") as f:
-                seed = json.load(f)
-                db["customers"] = seed.get("customers", [])
-                db["vehicles"] = seed.get("vehicles", [])
-                db["services"] = seed.get("services", [])
-                save_db()
-                return
+                loaded = json.load(f)
         except Exception:
             pass
+
+    if loaded:
+        if "users" in loaded and loaded["users"]:
+            db["users"] = loaded["users"]
+        else:
+            db["users"] = [dict(u) for u in DEFAULT_USERS]
+        db["customers"] = loaded.get("customers", [])
+        db["vehicles"] = loaded.get("vehicles", [])
+        db["services"] = loaded.get("services", [])
+        save_db()
+    else:
+        db["users"] = [dict(u) for u in DEFAULT_USERS]
 
 def save_db():
     try:
