@@ -26,6 +26,7 @@ app.add_middleware(
         "http://localhost:5173",
         "http://127.0.0.1:5173",
         "https://tt-1-eu8u.onrender.com",
+        "https://autopulse-vsm.onrender.com",
     ],
     allow_origin_regex=r"https://.*\.onrender\.com",
     allow_credentials=True,
