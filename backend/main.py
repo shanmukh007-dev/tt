@@ -25,7 +25,9 @@ app.add_middleware(
         "http://127.0.0.1:3000",
         "http://localhost:5173",
         "http://127.0.0.1:5173",
+        "https://tt-1-eu8u.onrender.com",
     ],
+    allow_origin_regex=r"https://.*\.onrender\.com",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -239,8 +241,8 @@ def login(creds: LoginRequest, response: Response):
         value=token,
         httponly=True,
         max_age=604800,
-        samesite="lax",
-        secure=False,
+        samesite="none",
+        secure=True,
         path="/",
     )
     return {
@@ -253,7 +255,7 @@ def login(creds: LoginRequest, response: Response):
 
 @app.post("/api/auth/logout")
 def logout(response: Response):
-    response.delete_cookie(key=COOKIE_NAME, path="/")
+    response.delete_cookie(key=COOKIE_NAME, path="/", samesite="none", secure=True)
     return {"success": True}
 
 @app.get("/api/auth/me", response_model=UserResponse)

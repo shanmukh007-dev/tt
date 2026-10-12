@@ -51,7 +51,7 @@ public class ServiceRecordService {
 
     @Transactional
     public ServiceResponse createService(ServiceRequest req) {
-        Vehicle vehicle = vehicleRepository.findById(req.vehicleId())
+        vehicleRepository.findById(req.vehicleId())
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.BAD_REQUEST, "Invalid vehicle ID"));
 
         String id = UUID.randomUUID().toString();

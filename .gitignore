@@ -30,6 +30,7 @@ venv/
 # IDE & Editor settings
 .vscode/
 .idea/
+.agents/
 *.iml
 .project
 .classpath
