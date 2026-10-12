@@ -1,0 +1,378 @@
+{
+  "staff_user": {
+    "id": "513d46d5-5557-48c8-ae1d-5b633141896e",
+    "email": "staff@autovsm.com",
+    "name": "Rajesh Sharma",
+    "role": "staff",
+    "customer_id": null
+  },
+  "customers": [
+    {
+      "id": "f9e99e4d-2e38-48e6-8f86-53b8cd795b93",
+      "name": "Vikram Malhotra",
+      "email": "vikram.malhotra@example.com",
+      "phone": "+91 98630 99210",
+      "address": "7 Linking Road, Bandra West, Mumbai",
+      "created_at": "2026-10-11T13:52:02.620000Z",
+      "vehicle_count": 1
+    },
+    {
+      "id": "11b7fa79-0510-430f-b318-9b1e4f4e2dc6",
+      "name": "Pooja Reddy",
+      "email": "pooja.reddy@example.com",
+      "phone": "+91 98774 55601",
+      "address": "230 Jubilee Hills, Hyderabad",
+      "created_at": "2026-10-11T13:52:02.620000Z",
+      "vehicle_count": 1
+    },
+    {
+      "id": "b4d8ead2-b110-4cad-baf3-96ceb3383002",
+      "name": "Priya Sharma",
+      "email": "priya.sharma@example.com",
+      "phone": "+91 98201 33450",
+      "address": "12 MG Road, Indiranagar, Bengaluru",
+      "created_at": "2026-10-11T13:52:02.618000Z",
+      "vehicle_count": 2
+    },
+    {
+      "id": "d5b9c50f-b42b-4e9e-8596-b0e01f7d1753",
+      "name": "Sneha Kulkarni",
+      "email": "sneha.kulkarni@example.com",
+      "phone": "+91 98449 22080",
+      "address": "410 FC Road, Shivajinagar, Pune",
+      "created_at": "2026-10-11T13:52:02.619000Z",
+      "vehicle_count": 1
+    },
+    {
+      "id": "29b4d4d1-d159-4cf1-a80c-abde364478b8",
+      "name": "Rahul Verma",
+      "email": "rahul.verma@example.com",
+      "phone": "+91 98882 11475",
+      "address": "88 Connaught Place, New Delhi",
+      "created_at": "2026-10-11T13:52:02.618000Z",
+      "vehicle_count": 1
+    },
+    {
+      "id": "9fb92440-ab05-45f3-8b05-2c9636c62a82",
+      "name": "Neha Gupta",
+      "email": "neha.gupta@example.com",
+      "phone": "+91 98000 12345",
+      "address": "15 Park Street, Kolkata",
+      "created_at": "2026-10-11T13:54:39.107000Z",
+      "vehicle_count": 0
+    }
+  ],
+  "vehicles": [
+    {
+      "id": "c142bfd5-27d2-40a5-9bf0-90a26b527b76",
+      "customer_id": "f9e99e4d-2e38-48e6-8f86-53b8cd795b93",
+      "make": "Nissan",
+      "model": "Altima",
+      "year": 2019,
+      "plate": "2PQS108",
+      "vin": "1N4AA4AP7KC321906",
+      "mileage": 91270,
+      "created_at": "2026-10-11T13:52:02.623000Z",
+      "owner_name": "Vikram Malhotra"
+    },
+    {
+      "id": "dc763bef-ebce-4c1e-8a77-9424cc261973",
+      "customer_id": "11b7fa79-0510-430f-b318-9b1e4f4e2dc6",
+      "make": "Tesla",
+      "model": "Model 3",
+      "year": 2024,
+      "plate": "9TSL442",
+      "vin": "5YJ3E1EA8PF412006",
+      "mileage": 9315,
+      "created_at": "2026-10-11T13:52:02.623000Z",
+      "owner_name": "Pooja Reddy"
+    },
+    {
+      "id": "dacd89a8-2f3e-41ae-be1d-63b7db2ed0bf",
+      "customer_id": "b4d8ead2-b110-4cad-baf3-96ceb3383002",
+      "make": "Honda",
+      "model": "CR-V",
+      "year": 2021,
+      "plate": "3BTR918",
+      "vin": "5J6RW2H85MA110922",
+      "mileage": 58120,
+      "created_at": "2026-10-11T13:52:02.622000Z",
+      "owner_name": "Priya Sharma"
+    },
+    {
+      "id": "121f9f9e-5b79-4e1d-a96c-8db038778f74",
+      "customer_id": "29b4d4d1-d159-4cf1-a80c-abde364478b8",
+      "make": "Ford",
+      "model": "F-150",
+      "year": 2023,
+      "plate": "8MLP330",
+      "vin": "1FTFW1E85PFA22731",
+      "mileage": 18760,
+      "created_at": "2026-10-11T13:52:02.622000Z",
+      "owner_name": "Rahul Verma"
+    },
+    {
+      "id": "0aaae803-7ae2-448c-8a41-7d84539a22a9",
+      "customer_id": "d5b9c50f-b42b-4e9e-8596-b0e01f7d1753",
+      "make": "BMW",
+      "model": "330i",
+      "year": 2020,
+      "plate": "6GXD755",
+      "vin": "WBA5R1C50LA948215",
+      "mileage": 64940,
+      "created_at": "2026-10-11T13:52:02.622000Z",
+      "owner_name": "Sneha Kulkarni"
+    },
+    {
+      "id": "31f32f54-bc1c-4e06-be02-6041d6c91cb0",
+      "customer_id": "b4d8ead2-b110-4cad-baf3-96ceb3383002",
+      "make": "Toyota",
+      "model": "Camry",
+      "year": 2022,
+      "plate": "7KJD421",
+      "vin": "4T1C11AK5NU568134",
+      "mileage": 42350,
+      "created_at": "2026-10-11T13:52:02.621000Z",
+      "owner_name": "Priya Sharma"
+    }
+  ],
+  "services": [
+    {
+      "id": "1c79a1b5-b8cb-437b-8421-d0f85781b74c",
+      "vehicle_id": "c142bfd5-27d2-40a5-9bf0-90a26b527b76",
+      "service_type": "UI Smoke Test Service",
+      "description": "",
+      "technician": "Amit Joshi",
+      "cost": 0.0,
+      "status": "pending",
+      "service_date": "2026-10-11",
+      "created_at": "2026-10-11T13:54:40.384000Z",
+      "vehicle_label": "2019 Nissan Altima \u00b7 2PQS108",
+      "owner_name": "Vikram Malhotra"
+    },
+    {
+      "id": "09e0614b-f35f-4033-814b-df5afb6c37e9",
+      "vehicle_id": "0aaae803-7ae2-448c-8a41-7d84539a22a9",
+      "service_type": "Coolant System Repair",
+      "description": "Thermostat and upper hose replacement, pressure test.",
+      "technician": "Arjun Nair",
+      "cost": 540.0,
+      "status": "in_progress",
+      "service_date": "2026-10-10",
+      "created_at": "2026-10-10T13:52:02.681000Z",
+      "vehicle_label": "2020 BMW 330i \u00b7 6GXD755",
+      "owner_name": "Sneha Kulkarni"
+    },
+    {
+      "id": "dadae364-ab0e-4fba-9937-0419b4675d3e",
+      "vehicle_id": "31f32f54-bc1c-4e06-be02-6041d6c91cb0",
+      "service_type": "50k Mile Major Service",
+      "description": "Spark plugs, air & cabin filters, brake fluid, tire rotation.",
+      "technician": "Rohan Mehta",
+      "cost": 649.0,
+      "status": "in_progress",
+      "service_date": "2026-10-09",
+      "created_at": "2026-10-09T13:52:02.624000Z",
+      "vehicle_label": "2022 Toyota Camry \u00b7 7KJD421",
+      "owner_name": "Priya Sharma"
+    },
+    {
+      "id": "24499d57-ced0-412a-a7c5-554f1f1b304d",
+      "vehicle_id": "dc763bef-ebce-4c1e-8a77-9424cc261973",
+      "service_type": "Brake Fluid Check",
+      "description": "Moisture test, top-up, brake inspection.",
+      "technician": "Arjun Nair",
+      "cost": 45.0,
+      "status": "completed",
+      "service_date": "2026-10-08",
+      "created_at": "2026-10-08T13:52:02.683000Z",
+      "vehicle_label": "2024 Tesla Model 3 \u00b7 9TSL442",
+      "owner_name": "Pooja Reddy"
+    },
+    {
+      "id": "359dc452-6766-4441-a39e-63c3198e89b8",
+      "vehicle_id": "c142bfd5-27d2-40a5-9bf0-90a26b527b76",
+      "service_type": "Battery Replacement",
+      "description": "AGM battery installed, charging system tested.",
+      "technician": "Suresh Patel",
+      "cost": 215.0,
+      "status": "pending",
+      "service_date": "2026-10-07",
+      "created_at": "2026-10-07T13:52:02.682000Z",
+      "vehicle_label": "2019 Nissan Altima \u00b7 2PQS108",
+      "owner_name": "Vikram Malhotra"
+    },
+    {
+      "id": "908620f7-5680-4248-8c48-4a2dcbdc2740",
+      "vehicle_id": "121f9f9e-5b79-4e1d-a96c-8db038778f74",
+      "service_type": "Tire Rotation & Alignment",
+      "description": "Four-wheel alignment, rotation, torque check.",
+      "technician": "Rohan Mehta",
+      "cost": 129.0,
+      "status": "pending",
+      "service_date": "2026-10-05",
+      "created_at": "2026-10-05T13:52:02.680000Z",
+      "vehicle_label": "2023 Ford F-150 \u00b7 8MLP330",
+      "owner_name": "Rahul Verma"
+    },
+    {
+      "id": "3cbf37a8-e8ac-49f1-9d86-8aec60a79150",
+      "vehicle_id": "dc763bef-ebce-4c1e-8a77-9424cc261973",
+      "service_type": "Cabin Air Filter Replacement",
+      "description": "HEPA cabin filter, HVAC sanitizing treatment.",
+      "technician": "Rohan Mehta",
+      "cost": 65.0,
+      "status": "completed",
+      "service_date": "2026-10-02",
+      "created_at": "2026-10-02T13:52:02.683000Z",
+      "vehicle_label": "2024 Tesla Model 3 \u00b7 9TSL442",
+      "owner_name": "Pooja Reddy"
+    },
+    {
+      "id": "8b0e5553-e4ae-47ba-8ff7-c37145e24464",
+      "vehicle_id": "121f9f9e-5b79-4e1d-a96c-8db038778f74",
+      "service_type": "Transmission Fluid Flush",
+      "description": "Full flush with OEM-spec Mercon ULV fluid.",
+      "technician": "Suresh Patel",
+      "cost": 189.0,
+      "status": "completed",
+      "service_date": "2026-09-29",
+      "created_at": "2026-09-29T13:52:02.679000Z",
+      "vehicle_label": "2023 Ford F-150 \u00b7 8MLP330",
+      "owner_name": "Rahul Verma"
+    },
+    {
+      "id": "9e104d4d-2117-4764-9b1b-d4c544249e07",
+      "vehicle_id": "c142bfd5-27d2-40a5-9bf0-90a26b527b76",
+      "service_type": "Synthetic Oil & Filter Change",
+      "description": "Full synthetic 5W-30, filter replaced.",
+      "technician": "Rohan Mehta",
+      "cost": 79.99,
+      "status": "completed",
+      "service_date": "2026-09-23",
+      "created_at": "2026-09-23T13:52:02.681000Z",
+      "vehicle_label": "2019 Nissan Altima \u00b7 2PQS108",
+      "owner_name": "Vikram Malhotra"
+    },
+    {
+      "id": "702d8920-44b6-402a-9ae6-e2eb1ead35d2",
+      "vehicle_id": "31f32f54-bc1c-4e06-be02-6041d6c91cb0",
+      "service_type": "Synthetic Oil & Filter Change",
+      "description": "Full synthetic 0W-20, filter replaced, 21-point inspection.",
+      "technician": "Arjun Nair",
+      "cost": 89.99,
+      "status": "completed",
+      "service_date": "2026-09-15",
+      "created_at": "2026-09-15T13:52:02.623000Z",
+      "vehicle_label": "2022 Toyota Camry \u00b7 7KJD421",
+      "owner_name": "Priya Sharma"
+    },
+    {
+      "id": "e6c033fd-47e2-4721-90ed-fe64bb4688e3",
+      "vehicle_id": "dacd89a8-2f3e-41ae-be1d-63b7db2ed0bf",
+      "service_type": "Brake Pad & Rotor Replacement",
+      "description": "Front pads and rotors, caliper service, road test.",
+      "technician": "Arjun Nair",
+      "cost": 412.5,
+      "status": "completed",
+      "service_date": "2026-08-31",
+      "created_at": "2026-08-31T13:52:02.624000Z",
+      "vehicle_label": "2021 Honda CR-V \u00b7 3BTR918",
+      "owner_name": "Priya Sharma"
+    },
+    {
+      "id": "ae3dd498-c45b-4379-9653-d6a78e881e5a",
+      "vehicle_id": "0aaae803-7ae2-448c-8a41-7d84539a22a9",
+      "service_type": "Annual Diagnostic Inspection",
+      "description": "Full-system scan, suspension check, report printed.",
+      "technician": "Suresh Patel",
+      "cost": 220.0,
+      "status": "completed",
+      "service_date": "2026-08-12",
+      "created_at": "2026-08-12T13:52:02.680000Z",
+      "vehicle_label": "2020 BMW 330i \u00b7 6GXD755",
+      "owner_name": "Sneha Kulkarni"
+    }
+  ],
+  "customer_user": {
+    "id": "f61c7ffa-d317-4a27-951e-651beb19b21b",
+    "email": "customer@autovsm.com",
+    "name": "Priya Sharma",
+    "role": "customer",
+    "customer_id": "b4d8ead2-b110-4cad-baf3-96ceb3383002"
+  },
+  "portal": {
+    "customer": {
+      "id": "b4d8ead2-b110-4cad-baf3-96ceb3383002",
+      "name": "Priya Sharma",
+      "email": "priya.sharma@example.com",
+      "phone": "+91 98201 33450",
+      "address": "12 MG Road, Indiranagar, Bengaluru",
+      "created_at": "2026-10-11T13:52:02.618000Z",
+      "vehicle_count": 2
+    },
+    "vehicles": [
+      {
+        "id": "31f32f54-bc1c-4e06-be02-6041d6c91cb0",
+        "customer_id": "b4d8ead2-b110-4cad-baf3-96ceb3383002",
+        "make": "Toyota",
+        "model": "Camry",
+        "year": 2022,
+        "plate": "7KJD421",
+        "vin": "4T1C11AK5NU568134",
+        "mileage": 42350,
+        "created_at": "2026-10-11T13:52:02.621000Z",
+        "owner_name": "Priya Sharma",
+        "services": [
+          {
+            "id": "dadae364-ab0e-4fba-9937-0419b4675d3e",
+            "vehicle_id": "31f32f54-bc1c-4e06-be02-6041d6c91cb0",
+            "service_type": "50k Mile Major Service",
+            "description": "Spark plugs, air & cabin filters, brake fluid, tire rotation.",
+            "technician": "Rohan Mehta",
+            "cost": 649.0,
+            "status": "in_progress",
+            "service_date": "2026-10-09",
+            "created_at": "2026-10-09T13:52:02.624000Z"
+          },
+          {
+            "id": "702d8920-44b6-402a-9ae6-e2eb1ead35d2",
+            "vehicle_id": "31f32f54-bc1c-4e06-be02-6041d6c91cb0",
+            "service_type": "Synthetic Oil & Filter Change",
+            "description": "Full synthetic 0W-20, filter replaced, 21-point inspection.",
+            "technician": "Arjun Nair",
+            "cost": 89.99,
+            "status": "completed",
+            "service_date": "2026-09-15",
+            "created_at": "2026-09-15T13:52:02.623000Z"
+          }
+        ]
+      },
+      {
+        "id": "dacd89a8-2f3e-41ae-be1d-63b7db2ed0bf",
+        "customer_id": "b4d8ead2-b110-4cad-baf3-96ceb3383002",
+        "make": "Honda",
+        "model": "CR-V",
+        "year": 2021,
+        "plate": "3BTR918",
+        "vin": "5J6RW2H85MA110922",
+        "mileage": 58120,
+        "created_at": "2026-10-11T13:52:02.622000Z",
+        "owner_name": "Priya Sharma",
+        "services": [
+          {
+            "id": "e6c033fd-47e2-4721-90ed-fe64bb4688e3",
+            "vehicle_id": "dacd89a8-2f3e-41ae-be1d-63b7db2ed0bf",
+            "service_type": "Brake Pad & Rotor Replacement",
+            "description": "Front pads and rotors, caliper service, road test.",
+            "technician": "Arjun Nair",
+            "cost": 412.5,
+            "status": "completed",
+            "service_date": "2026-08-31",
+            "created_at": "2026-08-31T13:52:02.624000Z"
+          }
+        ]
+      }
+    ]
+  }
+}

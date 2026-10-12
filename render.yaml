@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: autopulse-vsm
+    env: docker
+    plan: free
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: h2
+      - key: PORT
+        value: 8080
