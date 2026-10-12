@@ -1,6 +1,6 @@
 # AutoPulse VSM — Vehicle Service Management System
 
-A full-stack, enterprise-grade vehicle service management application built with **Java (Spring Boot)**, **MySQL**, **React.js**, and tested with **Postman**.
+A full-stack, enterprise-grade vehicle service management application built with **Java (Spring Boot)**, **Supabase (PostgreSQL)**, **React.js**, and tested with **Postman**.
 
 ---
 
@@ -9,7 +9,7 @@ A full-stack, enterprise-grade vehicle service management application built with
 | Layer | Technology | Description |
 | :--- | :--- | :--- |
 | **Backend** | **Java 17+ / Spring Boot 3.3.4** | RESTful API, Spring Data JPA, Hibernate, JJWT (JWT Session Auth) |
-| **Database** | **MySQL 8.0** | Relational database schema with relational foreign keys and cascading deletes |
+| **Database** | **Supabase (PostgreSQL)** | Managed cloud PostgreSQL database with relational keys & cascading deletes |
 | **Frontend** | **React.js 19 + TypeScript + Vite** | Single-page application, Tailwind CSS, Lucide Icons, TanStack Query |
 | **API Testing** | **Postman Collection (v2.1.0)** | Complete suite of test requests with auto-extracted variables and tests |
 
@@ -29,7 +29,7 @@ A full-stack, enterprise-grade vehicle service management application built with
 ```text
 tt/
 ├── backend-spring/                   # Java Spring Boot Backend
-│   ├── pom.xml                       # Maven build configuration & dependencies
+│   ├── pom.xml                       # Maven build configuration (PostgreSQL & Spring Boot)
 │   ├── src/main/
 │   │   ├── java/com/autopulse/vsm/
 │   │   │   ├── VsmApplication.java   # Spring Boot Main Entrypoint
@@ -42,7 +42,7 @@ tt/
 │   │   │   ├── util/                 # JwtUtil, SecurityUtils
 │   │   │   └── initializer/          # Automatic database seeder
 │   │   └── resources/
-│   │       ├── application.properties    # MySQL Configuration (Default)
+│   │       ├── application.properties    # Supabase (PostgreSQL) Configuration (Default)
 │   │       ├── application-h2.properties # In-memory H2 fallback profile
 │   │       └── seed_data.json            # Preloaded data for initial bootstrap
 │
@@ -56,8 +56,9 @@ tt/
 │       ├── components/               # Modals, Dialogs, Badges, Tables, AppShell
 │       └── lib/                      # API client, session management, types
 │
+├── supabase_schema.sql               # Ready-to-run PostgreSQL schema DDL & seed data for Supabase
 ├── AutoPulse_VSM.postman_collection.json # Ready-to-import Postman Collection
-├── database.sql                      # Complete MySQL schema DDL & initial seed records
+├── database.sql                      # MySQL schema DDL (legacy fallback)
 ├── Dockerfile                        # Multi-stage production container build
 ├── render.yaml                       # 1-Click deployment config for Render.com
 ├── publish-live-link.bat             # 1-Click launcher to generate instant public link
@@ -71,25 +72,19 @@ tt/
 
 ## 🚀 Step-by-Step Setup & Execution
 
-### 1. Database Setup (MySQL)
+### 1. Database Setup (Supabase)
 
-By default, the Spring Boot application will automatically create the `autopulse_vsm` database and tables upon startup if your MySQL server is running on `localhost:3306`.
-
-1. Ensure your MySQL service is running.
-2. If your MySQL root password is not `root`, either:
-   - Set the environment variable:
-     ```powershell
-     $env:MYSQL_PASSWORD="your_password"
-     ```
-   - Or update `backend-spring/src/main/resources/application.properties`:
-     ```properties
-     spring.datasource.username=root
-     spring.datasource.password=your_password
-     ```
-3. *(Optional)* You can also run [`database.sql`](file:///c:/Users/rajch/OneDrive/Desktop/tt/database.sql) directly in MySQL Workbench or MySQL CLI:
-   ```bash
-   mysql -u root -p < database.sql
+1. Create a free account & new project at **[supabase.com](https://supabase.com)**.
+2. In your Supabase Dashboard, go to **Project Settings** -> **Database**.
+3. Under **Connection string**, select **JDBC**.
+4. Set the environment variable in your terminal before launching the backend:
+   ```powershell
+   $env:SPRING_DATASOURCE_URL="jdbc:postgresql://db.[YOUR-PROJECT-REF].supabase.co:5432/postgres?sslmode=require"
+   $env:SPRING_DATASOURCE_USERNAME="postgres"
+   $env:SPRING_DATASOURCE_PASSWORD="[YOUR-SUPABASE-PASSWORD]"
    ```
+   *(Or copy `.env.example` to `.env` and fill in your values).*
+5. *(Optional)* If you want to view or run the table DDL manually, paste [`supabase_schema.sql`](file:///c:/Users/rajch/OneDrive/Desktop/tt/supabase_schema.sql) into **Supabase Dashboard -> SQL Editor** and click **Run**. Hibernate also auto-generates tables and seeds records on startup!
 
 ---
 

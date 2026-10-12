@@ -45,7 +45,7 @@ public class DatabaseInitializer implements CommandLineRunner {
             return;
         }
 
-        log.info("Seeding initial users and records into MySQL database...");
+        log.info("Seeding initial users and records into database...");
 
         // 1. Seed default Users
         User staff = new User(
